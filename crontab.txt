@@ -1,0 +1,17 @@
+#  Server snapshots
+#  Hourly
+0 8,10,12,14,16,18,20 * * * /usr/local/backup/btrfs_snap.sh server hourly
+#  Daily
+30 23 * * * /usr/local/backup/btrfs_snap.sh server daily
+31 23 * * * /usr/local/backup/btrfs_snap.sh PC daily
+#  Weekly
+35 23 * * 7 /usr/local/backup/btrfs_snap.sh server weekly
+36 23 * * 7 /usr/local/backup/btrfs_snap.sh PC weekly
+37 23 * * 7 /usr/local/backup/btrfs_snap.sh clear
+38 23 * * 7 btrfs scrub start /home/
+#  Monthly
+40 23 1 * * /usr/local/backup/btrfs_snap.sh server monthly
+41 23 1 * * /usr/local/backup/btrfs_snap.sh PC monthly
+#  Yearly
+40 23 31 12 * /usr/local/backup/btrfs_snap.sh server yearly
+41 23 31 12 * /usr/local/backup/btrfs_snap.sh PC yearly
