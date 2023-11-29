@@ -34,7 +34,7 @@ Disable is not needed (line 160).\
 It will also use logger to inject the status of snaps into the logs.
 
 # crontab
-
+```
 \#  Server snapshots\
 \#  Hourly\
 0 8,10,12,14,16,18,20 * * * /usr/local/backup/btrfs_snap.sh server hourly\
@@ -52,5 +52,5 @@ It will also use logger to inject the status of snaps into the logs.
 \#  Yearly\
 40 23 31 12 * /usr/local/backup/btrfs_snap.sh server yearly\
 41 23 31 12 * /usr/local/backup/btrfs_snap.sh PC yearly\
-
+```
 
