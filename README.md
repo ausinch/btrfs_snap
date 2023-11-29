@@ -28,6 +28,11 @@ Example:
 This snaps the copy of PC data files.\
 PC data files is an rsync of the users PCs.
 
+##  Monitoring
+The script will update a file `status_file="/usr/local/backup/status/btrfs"` for Nagios monitoring.\
+Disable is not needed (line 160).\
+It will also use logger to inject the status of snaps into the logs.
+
 # crontab
 
 \#  Server snapshots\
@@ -47,3 +52,5 @@ PC data files is an rsync of the users PCs.
 \#  Yearly\
 40 23 31 12 * /usr/local/backup/btrfs_snap.sh server yearly\
 41 23 31 12 * /usr/local/backup/btrfs_snap.sh PC yearly\
+
+
