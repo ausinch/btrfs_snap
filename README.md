@@ -3,8 +3,9 @@ Create, remove and list your snapshots.  Works with crontab.
 
 ##  What is does  tl;dr
 The script btrfs_snap.sh is given parameters to create hourly|daily|weekly|monthly|yearly snapshots.\
-Location of the snaps are set in string base_dir="/home/.snapshots/" in the script.\
-There are 2 target directories to snap; the data share (Users shared files) and PCs (
+Location of the snaps are set in string `base_dir="/home/.snapshots/"` in the script.\
+There are 2 target directories to snap; the data share /home/DATA (Users shared files) and PCs /home/BACKUP/PCs\
+These can be easily changed to suit you.
 
 ## Usage
 Usage: /usr/local/sbin/btrfs_snap.sh function location                                                                       
@@ -29,7 +30,7 @@ PC data files is an rsync of the users PCs.
 
 # crontab
 
-\#  Server snapshots
+\#  Server snapshots\
 \#  Hourly\
 0 8,10,12,14,16,18,20 * * * /usr/local/backup/btrfs_snap.sh server hourly\
 \#  Daily\
